@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ecommerce';
+  sideBarOpen =true
+// this function set sideBarOpen true/false
+  sidebarToggler(){
+    this.sideBarOpen = !this.sideBarOpen
+  }
 }

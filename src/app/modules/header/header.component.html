@@ -1,0 +1,67 @@
+<!-- <mat-toolbar *ngIf = "isLogged()">
+  <mat-toolbar-row class="justify-content-between">
+    <button mat-icon-button (click)="toggleSidebar()">
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <div class="row mr-2 ml-auto">
+      <ul class="row text-center">
+        <li>
+          <button mat-button [matMenuTriggerFor]="menu">
+            <img src="/assets/user.jpg" alt="" class="user-image" />tOM
+            <mat-icon class="user-image-icon">keyboard_arrow_down</mat-icon>
+          </button>
+
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item (click) ="Logout()">
+              <mat-icon>exit_to_app</mat-icon>
+              Logout
+            </button>
+            <button mat-menu-item>
+              <mat-icon>person_pin</mat-icon>
+              Profile
+            </button>
+          </mat-menu>
+        </li>
+      </ul>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar> -->
+
+<div id="header-container">
+  <div id="left-half" routerLink="/">
+    <h1><span id="lime-text">Lime</span><span id="store-text">Store</span></h1>
+  </div>
+  <div id="right-half">
+    <div id="button-container" *ngIf="showButtons">
+      <button mat-icon-button color="primary" aria-label="shopping cart">
+        <mat-icon
+          [matBadge]="cartAmount"
+          matBadgeColor="accent"
+          aria-label="shopping cart"
+          routerLink="/cart"
+          >shopping_cart</mat-icon
+        >
+      </button>
+      <button
+        mat-icon-button
+        color="primary"
+        aria-label="login"
+        *ngIf="!isLogged"
+      >
+        <mat-icon aria-label="login" matTooltip="login" routerLink="/login"
+          >login</mat-icon
+        >
+      </button>
+      <button
+        mat-icon-button
+        color="primary"
+        aria-label="logout"
+        *ngIf="isLogged"
+        (click)="Logout()"
+      >
+        <mat-icon aria-label="logout" matTooltip="logout">Logout</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>
