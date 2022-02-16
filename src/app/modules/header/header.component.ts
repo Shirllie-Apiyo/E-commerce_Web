@@ -15,9 +15,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  toggleSidebar() {
-    this.toggleSidebarForMe.emit();
-  }
+
   isLogged(): Boolean {
     return this.authService.isLoggedIn
   }
