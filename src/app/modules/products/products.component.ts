@@ -13,11 +13,20 @@ export class ProductsComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.httpClient.get("http://127.0.0.1:5000/api/products?category=phone")
+    this.httpClient.get("http://127.0.0.1:5000/api/products?category=phones")
     .subscribe((data) => this.displaydata(data))
 
-    this.httpClient.get("http://127.0.0.1:5000/api/products?category=tv")
+    this.httpClient.get("http://127.0.0.1:5000/api/products?category=Intel")
     .subscribe((data) => this.displaydata1(data))
+
+    this.httpClient.get("http://127.0.0.1:5000/api/products?category=mini")
+    .subscribe((data) => this.displaydata2(data))
+
+    this.httpClient.get("http://127.0.0.1:5000/api/products?category=mini")
+    .subscribe((data) => this.displaydata3(data))
+
+    this.httpClient.get("http://127.0.0.1:5000/api/products?category=mini")
+    .subscribe((data) => this.displaydata4(data))
   }
 
   httpdata: any
@@ -29,6 +38,21 @@ export class ProductsComponent implements OnInit {
   httpdata1: any
   displaydata1(data: any) {
     this.httpdata1 = data
+    console.log(data)
+  }
+  httpdata2: any
+  displaydata2(data: any) {
+    this.httpdata2 = data
+    console.log(data)
+  }
+  httpdata3: any
+  displaydata3(data: any) {
+    this.httpdata3 = data
+    console.log(data)
+  }
+  httpdata4: any
+  displaydata4(data: any) {
+    this.httpdata4 = data
     console.log(data)
   }
 

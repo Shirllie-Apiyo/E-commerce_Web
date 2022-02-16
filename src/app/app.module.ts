@@ -36,6 +36,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { LoginComponent } from './modules/auth/components/login/login.component';
 import { SignupComponent } from './modules/auth/components/signup/signup.component';
+import { FooterComponent } from './modules/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { SignupComponent } from './modules/auth/components/signup/signup.compone
     ProductsComponent,
     HeaderComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
