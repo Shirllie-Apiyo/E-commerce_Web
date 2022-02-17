@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+// import {platformBrowser} from "../../node_modules/@angular/platform-browser";
+// import { platformBrowser } from '../../node_modules/@angular/platform-browser';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -8,7 +11,9 @@ import { ProductsComponent } from './modules/products/products.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './modules/header/header.component';
 
-
+import { NgImageSliderModule } from 'ng-image-slider';
+// import {CarouselModule} from 'primeng/carousel';
+// import { ButtonModule } from 'primeng/button';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
 import {MatStepperModule} from '@angular/material/stepper';
@@ -34,9 +39,9 @@ import {MatBadgeModule} from '@angular/material/badge';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import { LoginComponent } from './modules/auth/components/login/login.component';
-import { SignupComponent } from './modules/auth/components/signup/signup.component';
-import { FooterComponent } from './modules/footer/footer.component';
+import {LoginComponent } from './modules/auth/components/login/login.component';
+import {SignupComponent } from './modules/auth/components/signup/signup.component';
+import {FooterComponent } from './modules/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +55,9 @@ import { FooterComponent } from './modules/footer/footer.component';
   imports: [
     BrowserModule,
     MatMenuModule,
+    // CarouselModule,
+    // ButtonModule,
+    NgImageSliderModule,
     MatIconModule,
     MatStepperModule,
     MatSnackBarModule,
