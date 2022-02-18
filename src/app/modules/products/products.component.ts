@@ -51,7 +51,7 @@ export class ProductsComponent implements OnInit {
     this.httpClient.get("http://127.0.0.1:5000/api/products?category=mini")
     .subscribe((data) => this.displaydata2(data))
 
-    this.httpClient.get("http://127.0.0.1:5000/api/products?category=mini")
+    this.httpClient.get("http://127.0.0.1:5000/api/products?category=toiletries")
     .subscribe((data) => this.displaydata3(data))
 
     this.httpClient.get("http://127.0.0.1:5000/api/products?category=mini")
