@@ -1,0 +1,117 @@
+.panel-right {
+  display: inline-block;
+  width: 66%;
+  vertical-align: middle;
+}
+footer {
+  background: #fff;
+  margin-top: 45px;
+  border-top: 1px solid #ececec;
+}
+.cust-support-link {
+  border-bottom: 1px solid #ececec;
+}
+.cust-support-link h4 {
+  color: #ed691f;
+  font-size: 15px;
+  font-weight: 600;
+}
+.cust-support-link p {
+  margin: 5px 0 0 0;
+  color: #666666;
+  display: block;
+}
+.cust-support-link [class*="col-"] {
+  border-left: 1px solid #ececec;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.cust-support-link .thumbnail {
+  display: inline-block;
+  width: 27%;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.cust-support-link .panel-right {
+  display: inline-block;
+  width: 66%;
+  vertical-align: middle;
+}
+.cust-support-link [class*="col-"]:last-child {
+  border-right: 1px solid #ececec;
+}
+.static-page-link {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.static-page-link > [class*="col-"] {
+  width: 15%;
+  float: left;
+}
+.static-page-link .subscribe-col[class*="col-"] {
+  width: 25%;
+  float: left;
+}
+.static-page-link > [class*="col-"] > h6 {
+  color: #ed691f;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.static-page-link > [class*="col-"] > a {
+  color: #666666;
+  font-weight: 400;
+  float: left;
+  clear: both;
+  margin-bottom: 8px;
+}
+.social-col .fab {
+  font-size: 11px;
+  background: #939393;
+  border-radius: 50%;
+  -o-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  color: #ffffff;
+  height: 20px;
+  line-height: 20px;
+  margin-right: 10px;
+  text-align: center;
+  width: 20px;
+}
+.copyright {
+  color: #fff;
+  font-size: 13px;
+  height: 55px;
+  line-height: 55px;
+}
+.subscribe-col p {
+  color: #666;
+}
+.subscribe-col span {
+  color: #282828;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 10px;
+}
+.subscribe-col [class*="col-"] {
+  padding: 0 2px;
+}
+.subscribe-col .btn {
+  border-radius: inherit;
+  -o-border-radius: inherit;
+  -moz-border-radius: inherit;
+  font-size: 12px;
+  padding: 7px 8px;
+}
+.static-page-link .subscribe-col[class*="col-"] > img {
+  width: 100%;
+}
+.app-store-icon {
+  width: 75%;
+  display: inline-block;
+}
+@media (max-width: 767px) {
+  .app-store-icon {
+    width: 150px;
+  }
+}
