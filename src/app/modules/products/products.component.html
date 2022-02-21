@@ -127,3 +127,51 @@
     </div>
   </div>
 </div>
+
+<div class="row mRT30">
+  <div class="container">
+    <div class="whiteBg brdLBR">
+      <div class="col-xs-12 view-deals">
+        <h3 class="word-wrap inline-block">
+          Duvets & Pillows- stay cozy & comfortable
+        </h3>
+
+        <a
+          href="/entity/Duvets-and-Pillows-stay-cozy-and-comfortable-/7"
+          class="btn btn-orange"
+          >VIEW ALL</a
+        >
+      </div>
+
+      <div class="col-xs-12">
+        <div class="flexslider-03 flexslider">
+          <ul class="slidejs" *ngFor="let row of httpdata3">
+            <li>
+              <div class="category-product text-center">
+                <a
+                  href="/product/waterproof-mattress-protector/54722/69522"
+                  class="thumbnail"
+                >
+                  <img
+                    class="img-responsive"
+                    src="/assets/{{ row.img }}"
+                    alt="Waterproof Mattress Protector"
+                    title="Waterproof Mattress Protector"
+                  />
+                </a>
+
+                <a href="#" class="prd-title">{{ row.title }}</a>
+                <p>{{ row.desc }}</p>
+                <div class="prd-price">
+                  <span class="mrp-price">KES {{ row.price }}</span>
+                  <span class="offer-price">KES {{ row.price }}</span>
+                </div>
+                <div class="prd-offer btn btn-default">8% OFF</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
