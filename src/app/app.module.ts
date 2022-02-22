@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+// import angular.module('myModule', ['angular-flexslider']);
 
 // import {platformBrowser} from "../../node_modules/@angular/platform-browser";
 // import { platformBrowser } from '../../node_modules/@angular/platform-browser';
