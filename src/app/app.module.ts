@@ -12,7 +12,13 @@ import { ProductsComponent } from './modules/products/products.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './modules/header/header.component';
 
+// import { SliderComponent } from './slider/slider.component';
+// import { SliderComponent } from '@angular-slider/ngx-slider/slider.component';
+
 import { NgImageSliderModule } from 'ng-image-slider';
+// import { NgxSliderModule } from '@angular-slider/ngx-slider';
+
+// import { NgImageSliderModule } from 'ng-image-slider';
 // import {CarouselModule} from 'primeng/carousel';
 // import { ButtonModule } from 'primeng/button';
 import {MatMenuModule} from '@angular/material/menu';
@@ -59,7 +65,9 @@ import {FooterComponent } from './modules/footer/footer.component';
     // CarouselModule,
     // ButtonModule,
     NgImageSliderModule,
+    // NgxSliderModule,
     MatIconModule,
+    // NgImageSliderModule,
     MatStepperModule,
     MatSnackBarModule,
     MatButtonModule,

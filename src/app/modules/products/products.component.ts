@@ -11,7 +11,7 @@ export class ProductsComponent implements OnInit {
   // responsiveOptions;
   // //define validable to store dynamic products data
   // products:any;
-
+  imgCollection: any;
   constructor(
     private httpClient:HttpClient
   ) {
