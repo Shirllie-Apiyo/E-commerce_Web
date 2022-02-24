@@ -11,6 +11,14 @@ export class ProductsComponent implements OnInit {
   // responsiveOptions;
   // //define validable to store dynamic products data
   // products:any;
+
+  responsiveOptions:any;
+  //define validable to store dynamic products data
+  products:any;
+  products1:any;
+
+
+
   imgCollection: any;
   constructor(
     private httpClient:HttpClient
@@ -37,9 +45,37 @@ export class ProductsComponent implements OnInit {
   //   this.products = data;
   //       }, error => console.error(error));
 
+
+  this.responsiveOptions = [
+    {
+        breakpoint: '1024px',
+        numVisible: 3,
+        numScroll: 3
+    },
+    {
+        breakpoint: '768px',
+        numVisible: 2,
+        numScroll: 2
+    },
+    {
+        breakpoint: '560px',
+        numVisible: 1,
+        numScroll: 1
+    }
+];
    }
 
   ngOnInit(): void {
+
+    this.httpClient.get('http://127.0.0.1:5000/api/products?category=phones').subscribe(data => {
+      //data storing for use in html component
+      this.products = data;
+          }, error => console.error(error));
+
+    this.httpClient.get('http://127.0.0.1:5000/api/products?category=Intel').subscribe(data => {
+      //data storing for use in html component
+      this.products1 = data;
+          }, error => console.error(error));
 
 
     this.httpClient.get("http://127.0.0.1:5000/api/products?category=phones")
@@ -56,6 +92,9 @@ export class ProductsComponent implements OnInit {
 
     this.httpClient.get("http://127.0.0.1:5000/api/products?category=mini")
     .subscribe((data) => this.displaydata4(data))
+
+    this.httpClient.get("http://127.0.0.1:5000/api/products/getslider")
+    .subscribe((data) => this.displaydata5(data))
   }
 
   httpdata: any
@@ -82,6 +121,12 @@ export class ProductsComponent implements OnInit {
   httpdata4: any
   displaydata4(data: any) {
     this.httpdata4 = data
+    console.log(data)
+  }
+
+  httpdata5: any
+  displaydata5(data: any) {
+    this.imgCollection = data
     console.log(data)
   }
 

@@ -50,6 +50,10 @@ import {LoginComponent } from './modules/auth/components/login/login.component';
 import {SignupComponent } from './modules/auth/components/signup/signup.component';
 import {FooterComponent } from './modules/footer/footer.component';
 
+
+import {CarouselModule} from 'primeng/carousel';
+import { ButtonModule } from 'primeng/button';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -62,8 +66,8 @@ import {FooterComponent } from './modules/footer/footer.component';
   imports: [
     BrowserModule,
     MatMenuModule,
-    // CarouselModule,
-    // ButtonModule,
+    CarouselModule,
+    ButtonModule,
     NgImageSliderModule,
     // NgxSliderModule,
     MatIconModule,

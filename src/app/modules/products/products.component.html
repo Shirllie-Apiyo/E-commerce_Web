@@ -100,21 +100,117 @@
       <br /><br />
     </div>
   </div>
-  <h3>Others</h3>
-  <div class="row">
-    <div class="col-md-3" *ngFor="let row of httpdata4">
-      <div class="card-shadow">
-        <div class="card-body">
-          <ng-image-slider
-            #nav
-            [images]="imgCollection"
-            [infinite]="true"
-            [autoSlide]="1"
-            [imageSize]="{ width: '20%', height: '20%' }"
-          >
-          </ng-image-slider>
-        </div>
+
+  <br />
+  <h2>Top Picks For you</h2>
+  <div class="container-fluid">
+    <div fxLayout="row">
+      <div fxFlex="100">
+        <ng-image-slider
+          #nav
+          [images]="imgCollection"
+          [infinite]="true"
+          [autoSlide]="1"
+          [imageSize]="{ width: '30%', height: '30%' }"
+        >
+        </ng-image-slider>
       </div>
     </div>
+  </div>
+  <br /><br />
+
+  <div>
+    <p-carousel
+      [value]="products"
+      [numVisible]="4"
+      [numScroll]="4"
+      [circular]="false"
+      [autoplayInterval]="10000"
+      [responsiveOptions]="responsiveOptions"
+    >
+      <ng-template pTemplate="header"> </ng-template>
+      <ng-template let-product pTemplate="item">
+        <div class="product-item">
+          <div class="product-item-content">
+            <div class="p-mb-3">
+              <img
+                class="product-image"
+                src="/assets/{{ product.img }}"
+                alt="{{ product.title }}"
+              />
+            </div>
+            <div>
+              <h4 class="p-mb-1">{{ product.title }}</h4>
+              <h6 class="p-mt-0 p-mb-3">{{ product.price }}</h6>
+              <div class="car-buttons p-mt-5">
+                <p-button
+                  type="button"
+                  styleClass="p-button p-button-rounded p-mr-2"
+                  icon="pi pi-search"
+                ></p-button>
+                <p-button
+                  type="button"
+                  styleClass="p-button-success p-button-rounded p-mr-2"
+                  icon="pi pi-star"
+                ></p-button>
+                <p-button
+                  type="button"
+                  styleClass="p-button-help p-button-rounded"
+                  icon="pi pi-cog"
+                ></p-button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </p-carousel>
+  </div>
+
+  <h2>deals of the week</h2>
+  <div>
+    <p-carousel
+      [value]="products1"
+      [numVisible]="5"
+      [numScroll]="5"
+      [circular]="false"
+      [autoplayInterval]="10000"
+      [responsiveOptions]="responsiveOptions"
+    >
+      <ng-template pTemplate="header"> </ng-template>
+      <ng-template let-product1 pTemplate="item">
+        <div class="product-item">
+          <div class="product-item-content">
+            <div class="p-mb-3">
+              <img
+                class="product-image"
+                src="/assets/{{ product1.img }}"
+                alt="{{ product1.title }}"
+              />
+            </div>
+            <div>
+              <h4 class="p-mb-1">{{ product1.title }}</h4>
+              <h6 class="p-mt-0 p-mb-3">{{ product1.price }}</h6>
+              <div class="car-buttons p-mt-5">
+                <p-button
+                  type="button"
+                  styleClass="p-button p-button-rounded p-mr-2"
+                  icon="pi pi-search"
+                ></p-button>
+                <p-button
+                  type="button"
+                  styleClass="p-button-success p-button-rounded p-mr-2"
+                  icon="pi pi-star"
+                ></p-button>
+                <p-button
+                  type="button"
+                  styleClass="p-button-help p-button-rounded"
+                  icon="pi pi-cog"
+                ></p-button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </p-carousel>
   </div>
 </div>
