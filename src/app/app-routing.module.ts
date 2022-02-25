@@ -3,12 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { ProductsComponent } from './modules/products/products.component';
 import { HeaderComponent } from './modules/header/header.component';
 import { FooterComponent } from './modules/footer/footer.component';
-
+import { SingleComponent } from './modules/single/single.component';
 const routes: Routes = [
-  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+  { path: '', redirectTo: 'products', pathMatch: 'full' },
   { path: 'products', component: ProductsComponent },
   { path: 'header', component: HeaderComponent },
   {path:'footer', component:FooterComponent},
+  {path:'single/:id', component:SingleComponent}
 
 ];
 

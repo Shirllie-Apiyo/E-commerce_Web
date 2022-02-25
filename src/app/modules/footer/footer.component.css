@@ -115,3 +115,13 @@ footer {
     width: 150px;
   }
 }
+.links a {
+  text-decoration: none;
+}
+.fonts h6 {
+  font-size: large;
+}
+
+.fonts {
+  margin-left: 3%;
+}

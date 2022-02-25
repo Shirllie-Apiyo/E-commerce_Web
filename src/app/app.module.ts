@@ -53,6 +53,7 @@ import {FooterComponent } from './modules/footer/footer.component';
 
 import {CarouselModule} from 'primeng/carousel';
 import { ButtonModule } from 'primeng/button';
+import { SingleComponent } from './modules/single/single.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import { ButtonModule } from 'primeng/button';
     HeaderComponent,
     LoginComponent,
     SignupComponent,
-    FooterComponent
+    FooterComponent,
+    SingleComponent
   ],
   imports: [
     BrowserModule,
