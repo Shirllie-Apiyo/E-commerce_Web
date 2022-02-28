@@ -17,17 +17,17 @@
     </div>
   </div>
   <br /><br />
-  <!-- ===============END OF DEALS OF THE WEEK=========================== -->
-  <!-- =================== SECTION FOR SMART PHONES ==================================== -->
+  <!-- ===================  END OF DEALS OF THE WEEK    ==================================== -->
+  <!-- =================== SECTION FOR SMART PHONES      ==================================== -->
 
   <div class="card">
-    <h2 id="deals">Deals of the week</h2>
+    <h2>SmartPhones</h2>
     <p-carousel
       [value]="products"
       [numVisible]="4"
       [numScroll]="4"
       [circular]="false"
-      [autoplayInterval]="10000"
+      [autoplayInterval]="5000"
       [responsiveOptions]="responsiveOptions"
     >
       <ng-template pTemplate="header"> </ng-template>
@@ -43,7 +43,8 @@
             </div>
             <div>
               <h4 class="p-mb-1">{{ product.title }}</h4>
-              <h6 class="p-mt-0 p-mb-3">{{ product.price }}</h6>
+              <h6 class="price p-mt-0 p-mb-3">{{ product.price }}</h6>
+              <h4 class="cancel p-mt-0 p-mb-3">{{ product.desc_price }}</h4>
               <div class="car-buttons p-mt-5">
                 <p-button
                   type="button"
@@ -60,6 +61,11 @@
                   styleClass="p-button-help p-button-rounded"
                   icon="pi pi-cog"
                 ></p-button>
+                <br />
+                <br />
+                <a href="/single/{{ product._id }}" class="btn btn-warning"
+                  >ORDER NOW</a
+                >
               </div>
             </div>
           </div>
