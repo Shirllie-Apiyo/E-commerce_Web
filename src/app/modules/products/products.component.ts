@@ -72,7 +72,7 @@ export class ProductsComponent implements OnInit {
       this.products = data;
           }, error => console.error(error));
 
-    this.httpClient.get('http://127.0.0.1:5000/api/products?category=Intel').subscribe(data => {
+    this.httpClient.get('http://127.0.0.1:5000/api/products?category=hp').subscribe(data => {
       //data storing for use in html component
       this.products1 = data;
           }, error => console.error(error));

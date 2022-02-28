@@ -1,9 +1,27 @@
 {{ httpdata.category }}
 <div class="container-fluid">
+  <!-- ===============DEALS OF THE WEEK SECTION========================= -->
+  <h2>Deals of the week</h2>
+  <div class="container-fluid">
+    <div fxLayout="row">
+      <div fxFlex="100">
+        <ng-image-slider
+          #nav
+          [images]="imgCollection"
+          [infinite]="true"
+          [autoSlide]="1"
+          [imageSize]="{ width: '100%', height: '50%' }"
+        >
+        </ng-image-slider>
+      </div>
+    </div>
+  </div>
+  <br /><br />
+  <!-- ===============END OF DEALS OF THE WEEK=========================== -->
   <!-- =================== SECTION FOR SMART PHONES ==================================== -->
-  <h2 id="deals">Deals of the week</h2>
 
-  <div>
+  <div class="card">
+    <h2 id="deals">Deals of the week</h2>
     <p-carousel
       [value]="products"
       [numVisible]="4"
@@ -49,18 +67,21 @@
       </ng-template>
     </p-carousel>
   </div>
+  <br />
+  <br />
 
   <!-- ===================END OF SMART PHONES SECTION ================================== -->
 
   <!-- ===================START OF COMPUTING SECTION====================================== -->
-  <h2 id="deals">COMPUTING DEVICES</h2>
-  <div>
+
+  <div class="card">
+    <h2 class="deals">Computing Devices</h2>
     <p-carousel
       [value]="products1"
-      [numVisible]="5"
-      [numScroll]="5"
+      [numVisible]="4"
+      [numScroll]="4"
       [circular]="false"
-      [autoplayInterval]="10000"
+      [autoplayInterval]="5000"
       [responsiveOptions]="responsiveOptions"
     >
       <ng-template pTemplate="header"> </ng-template>
@@ -76,7 +97,8 @@
             </div>
             <div>
               <h4 class="p-mb-1">{{ product1.title }}</h4>
-              <h6 class="p-mt-0 p-mb-3">{{ product1.price }}</h6>
+              <h6 class="price p-mt-0 p-mb-3">{{ product1.price }}</h6>
+              <h4 class="cancel p-mt-0 p-mb-3">{{ product1.desc_price }}</h4>
               <div class="car-buttons p-mt-5">
                 <p-button
                   type="button"
@@ -207,20 +229,4 @@
   </div>
 
   <br />
-  <h2>Top Picks For you</h2>
-  <div class="container-fluid">
-    <div fxLayout="row">
-      <div fxFlex="100">
-        <ng-image-slider
-          #nav
-          [images]="imgCollection"
-          [infinite]="true"
-          [autoSlide]="1"
-          [imageSize]="{ width: '30%', height: '30%' }"
-        >
-        </ng-image-slider>
-      </div>
-    </div>
-  </div>
-  <br /><br />
 </div>

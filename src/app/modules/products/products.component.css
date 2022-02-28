@@ -2,3 +2,19 @@
   font-size: 30pt;
   padding: 3%;
 }
+.price {
+  color: red;
+  font-size: 25px;
+  font-family: sans-serif;
+  font-weight: bolder;
+}
+.cancel {
+  text-decoration: line-through;
+  color: grey;
+}
+.carousel-item {
+  min-height: 280px;
+}
+.card {
+  border: none;
+}
