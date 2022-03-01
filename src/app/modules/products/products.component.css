@@ -18,3 +18,13 @@
 .card {
   border: none;
 }
+.x {
+  font-size: 30px;
+  padding: 1%;
+}
+.y {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: inherit;
+}

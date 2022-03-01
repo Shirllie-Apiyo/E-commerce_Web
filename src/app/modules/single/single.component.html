@@ -83,4 +83,31 @@
       </div>
     </div>
   </div>
+  <div class="row">
+    <div class="col-md-5">
+      <h2>Leave a comment on this product</h2>
+      <div *ngIf="successmessage" class="alert alert-success">
+        <span>Success {{ successmessage | json }}</span>
+      </div>
+      <div *ngIf="errormessage" class="alert alert-danger">
+        <span>Warning, {{ errormessage | json }}</span>
+      </div>
+      <form [formGroup]="form" (ngSubmit)="submitForm()">
+        <input type="radio" formControlName="rating" name="x" value="1" /> 1
+        <input type="radio" formControlName="rating" name="x" value="2" /> 2
+        <input type="radio" formControlName="rating" name="x" value="3" /> 3
+        <input type="hidden" formControlName="id" />
+        <textarea
+          name=""
+          formControlName="message"
+          class="form-control"
+          id=""
+          cols="50"
+          rows="5"
+        ></textarea>
+        <br />
+        <button class="btn btn-info w-100">Add Employee</button>
+      </form>
+    </div>
+  </div>
 </div>

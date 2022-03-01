@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // import angular.module('myModule', ['angular-flexslider']);
 
 // import {platformBrowser} from "../../node_modules/@angular/platform-browser";
@@ -71,6 +72,8 @@ import { SingleComponent } from './modules/single/single.component';
     CarouselModule,
     ButtonModule,
     NgImageSliderModule,
+    FormsModule,
+    ReactiveFormsModule,
     // NgxSliderModule,
     MatIconModule,
     // NgImageSliderModule,

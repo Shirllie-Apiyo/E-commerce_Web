@@ -39,7 +39,7 @@
             ],
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.min.js",
-              "assets/change.js"
+              "src/assets/js/change.js"
 
             ]
           },
@@ -118,7 +118,7 @@
             ],
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.min.js",
-              "assets/change.js"
+              "src/assets/js/change.js"
 
             ]
           }
