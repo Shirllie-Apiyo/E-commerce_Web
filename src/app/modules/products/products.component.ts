@@ -17,6 +17,7 @@ export class ProductsComponent implements OnInit {
   products:any;
   products1:any;
   products2:any;
+  products3:any;
 
 
 
@@ -60,6 +61,13 @@ export class ProductsComponent implements OnInit {
       //data storing for use in html component
       this.products2 = data;
           }, error => console.error(error));
+
+    this.httpClient.get('http://127.0.0.1:5000/api/products?category=games').subscribe(data => {
+      //data storing for use in html component
+      this.products3 = data;
+          }, error => console.error(error));
+
+
 
 
     this.httpClient.get("http://127.0.0.1:5000/api/products?category=Intel")
