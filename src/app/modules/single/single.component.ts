@@ -20,7 +20,7 @@ export class SingleComponent implements OnInit {
       this.form = this.fb.group({
         message: [''],
         id: [this.getId],
-        rating:['']
+        rating:['0']
 
         // todo client validation
       });
@@ -36,6 +36,8 @@ export class SingleComponent implements OnInit {
       "message": this.form.get("message")!.value,
       "id": this.form.get("id")!.value,
       "rating": this.form.get("rating")!.value
+
+
 
 
     }).subscribe({
@@ -64,6 +66,14 @@ export class SingleComponent implements OnInit {
     this.http.get(API_URL)
       .subscribe((data) => this.displaydata(data));
 
+
+      let API_URL1 = `http://127.0.0.1:5000/api/products/findreviews/${this.getId}`
+    console.log("this"+this.getId);
+    console.log("this"+API_URL1);
+    this.http.get(API_URL1)
+      .subscribe((data) => this.displaydata1(data)
+      );
+
   }//end
   httpdata: any
   displaydata(data: any) {
@@ -71,6 +81,19 @@ export class SingleComponent implements OnInit {
     console.log(data);
   }//this data is exposed to html
 
+
+  httpdata1: any
+  empty: any
+  displaydata1(data: any) {
+    if (data.length == 0){
+        this.empty = "No reviews"
+    }
+
+    else {
+    this.httpdata1 = data
+    console.log("review: "+data);
+    }
+  }//this
 
 }
 

@@ -93,9 +93,18 @@
         <span>Warning, {{ errormessage | json }}</span>
       </div>
       <form [formGroup]="form" (ngSubmit)="submitForm()">
-        <input type="radio" formControlName="rating" name="x" value="1" /> 1
-        <input type="radio" formControlName="rating" name="x" value="2" /> 2
-        <input type="radio" formControlName="rating" name="x" value="3" /> 3
+        <input
+          type="radio"
+          formControlName="rating"
+          name="rating"
+          value="1"
+          [defaultChecked]="true"
+        />
+        1
+        <input type="radio" formControlName="rating" name="rating" value="2" />
+        2
+        <input type="radio" formControlName="rating" name="rating" value="3" />
+        3
         <input type="hidden" formControlName="id" />
         <textarea
           name=""
@@ -108,6 +117,14 @@
         <br />
         <button class="btn btn-info w-100">Add Employee</button>
       </form>
+    </div>
+
+    <div class="col-md-6 review">
+      <h4><b>Reviews</b></h4>
+      {{ empty }}
+      <div *ngFor="let row of httpdata1" class="card mt-3">
+        <p>{{ row.message }} <br /></p>
+      </div>
     </div>
   </div>
 </div>
